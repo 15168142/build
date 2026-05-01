@@ -10,11 +10,9 @@ git -C kernel/xiaomi/sm8250 submodule update --init --recursive
 export TZ='Asia/Ho_Chi_Minh'
 source build/envsetup.sh
 
-export BUILD_USERNAME='いろは'
-export KBUILD_BUILD_USER='いろは'
-export BUILD_HOSTNAME='月読'
-export KBUILD_BUILD_HOST='月読'
-
+export TZ='Asia/Ho_Chi_Minh'
 lunch clover_alioth-bp4a-user
+export TZ='Asia/Ho_Chi_Minh'
 mka installclean
+export TZ='Asia/Ho_Chi_Minh'
 mka clover
