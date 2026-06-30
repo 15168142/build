@@ -14,6 +14,7 @@ curl -fsSL https://github.com/15168142/packages_modules_Connectivity-clover/comm
 curl -fsSL https://github.com/15168142/packages_modules_Connectivity-clover/commit/d309b602387a6726b318cad127283e718c772193.patch | git am
 curl -fsSL https://github.com/15168142/packages_modules_Connectivity-clover/commit/378018c5a9668f2ef210e60fcccbf6dbacd656cd.patch | git am
 cd ../../..
+sed -i '8,10d' vendor/circle/config/version.mk
 
 export TZ='Asia/Ho_Chi_Minh'
 TZ='Asia/Ho_Chi_Minh' source build/envsetup.sh
