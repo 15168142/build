@@ -23,4 +23,4 @@ export KBUILD_BUILD_USER='いろは'
 export BUILD_HOSTNAME='月読'
 export KBUILD_BUILD_HOST='月読'
 TZ='Asia/Ho_Chi_Minh' lunch circle_alioth-bp4a-userdebug
-TZ='Asia/Ho_Chi_Minh' mka clover
+TZ='Asia/Ho_Chi_Minh' mka live
