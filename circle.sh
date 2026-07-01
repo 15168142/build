@@ -3,7 +3,9 @@ repo init -u https://github.com/ProjectCiRCLE-ROM/manifest.git -b 16.2 --git-lfs
 rm -rf .repo/local_manifests
 git clone https://github.com/15168142/local_manifests.git --depth 1 -b circle .repo/local_manifests
 
-rm -rf system/core packages/modules/Connectivity
+# saar im ensure patches dont get applied twice (ahem sed)
+rm -rf system/core packages/modules/Connectivity vendor/circle
+
 /opt/crave/resync.sh
 
 cd system/core
