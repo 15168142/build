@@ -19,11 +19,11 @@ curl -fsSL https://github.com/15168142/packages_modules_Connectivity-clover/comm
 cd ../../..
 sed -i '8,10d' vendor/circle/config/version.mk
 
-export TZ='Asia/Ho_Chi_Minh'
-TZ='Asia/Ho_Chi_Minh' source build/envsetup.sh
+source build/envsetup.sh
 export BUILD_USERNAME='いろは'
 export KBUILD_BUILD_USER='いろは'
 export BUILD_HOSTNAME='月読'
 export KBUILD_BUILD_HOST='月読'
-TZ='Asia/Ho_Chi_Minh' lunch circle_alioth-bp4a-userdebug
-TZ='Asia/Ho_Chi_Minh' mka live
+lunch circle_alioth-bp4a-userdebug
+mka installclean
+mka live
