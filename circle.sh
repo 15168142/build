@@ -9,7 +9,7 @@ export WITH_GMS=true
 lunch circle_alioth-bp4a-userdebug
 base64 -d device/xiaomi/alioth/configs/camera/secret > device/xiaomi/alioth/configs/camera/st_license.lic
 m installclean
-m live
+m live || exit 1
 git clone https://github.com/ProjectCiRCLE-ROM/OTA.git
 chmod +x OTA/createjson.sh
 . OTA/createjson.sh
