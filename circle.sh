@@ -12,4 +12,4 @@ m installclean
 m live || exit 1
 git clone https://github.com/ProjectCiRCLE-ROM/OTA.git
 chmod +x OTA/createjson.sh
-. OTA/createjson.sh
+. OTA/createjson.sh > ota.json
