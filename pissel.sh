@@ -1,3 +1,7 @@
+sudo rm -rf /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+echo "Asia/Ho_Chi_Minh" | sudo tee /etc/timezone
+
 repo init -u https://github.com/15168142/manifest-pos.git -b seventeen --git-lfs --depth=1
 
 rm -rf .repo/local_manifests
