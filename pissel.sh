@@ -10,6 +10,15 @@ git clone https://github.com/15168142/local_manifests.git --depth 1 -b pissel .r
 rm -rf prebuilts/gcc
 /opt/crave/resync.sh
 
+git clone https://github.com/LineageOS/scripts.git
+mkdir -p vendor/lineage-priv
+mv scripts/lineage-priv-template vendor/lineage-priv/keys
+rm -rf scripts
+cd vendor/lineage-priv/keys
+sed -i 's|/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com|/C=VN/ST=Ho Chi Minh/L=Ho Chi Minh/O=Nhu/OU=Nhu/CN=Nhu/emailAddress=nhu@waifu.club|g' make_key.sh
+./keys.sh
+cd ../../..
+
 source build/envsetup.sh
 export BUILD_USERNAME='いろは'
 export BUILD_HOSTNAME='月読'
